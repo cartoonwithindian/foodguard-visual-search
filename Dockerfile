@@ -12,7 +12,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # System libs required by faiss (OpenMP) + Pillow image codecs.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
-    libgl1-mesa-glx \
+    libgl1 \
+    libgl1 \
     libglib2.0-0 \
     wget \
     && rm -rf /var/lib/apt/lists/*
